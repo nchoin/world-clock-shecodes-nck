@@ -33,10 +33,14 @@ function updateTheTime() {
 }
 
 function updateCityTimeInfo(event) {
+   let newCityElement = document.querySelector("#cities-replace");
+   let eraseNewCityElement = document.querySelector("#cities-replace");
   let cityTimeZone = event.target.value;
   let cityTime = moment().tz(cityTimeZone);
   console.log(cityTime.format("MMMM D, YYYY"));
   console.log(cityTime.format("h:mm:ss A "));
+  
+  // eraseNewCityElement.innerHTML = "";
 //  repalce the name of the  cityTimeZone with the acutal name of the city
   if (cityTimeZone === "America/New_York") {
     cityName = "Boston";
@@ -52,7 +56,7 @@ function updateCityTimeInfo(event) {
   }
   console.log(cityName)
 
- let newCityElement = document.querySelector("#cities-replace");
+
 newCityElement.innerHTML = `
   <div class="city">
     <div>
