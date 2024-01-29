@@ -8,7 +8,6 @@
   --ltpurple: #b6a9f6;
   --mdpink: #f2b3c3;
   --mdpurple: #ae80b8;
-
   --gradient: linear-gradient(
     106.5deg,
     rgba(255, 215, 185, 0.91) 23%,
@@ -23,7 +22,7 @@
 
 body {
   font-family: "Acme", sans-serif;
-  background: var(--hintofpurple);
+  background: var(--hintofpink);
   /* font-family: 'Neuton', serif; */
 }
 
@@ -42,31 +41,6 @@ h1 {
   box-shadow: 5px 5px 10px var(--mdpurple);
   padding: 30px;
 }
-.city {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-  align-items: center;
-  border-bottom: dashed 1px rgba(242, 179, 195, 0.5);
-  color: var(--brown);
-}
-.date {
-  margin-bottom: 10px;
-  color:var(--hintofpurple);
-  opacity: 0.8;
-}
-.time {
-  font-size: 2.5em;
-  color: var(--brown);
-}
-.time small {
-  font-size: 0.2em;
-  vertical-align: middle;
-}
-h2 {
-  margin-bottom: 1px;
-  font-size: 2em;
-}
 
 select {
   display: block;
@@ -79,13 +53,44 @@ select {
   color: var(--brown);
   background: var(--hintofpink);
 }
+h2 {
+  margin-bottom: 1px;
+  font-size: 2em;
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+  border-bottom: dashed 1px rgba(242, 179, 195, 0.7);
+  color: var(--brown);
+}
+.city:last-child {
+    border: none;
+}
+.date {
+  margin-bottom: 10px;
+  color:var(--hintofpink);
+  opacity: 0.8;
+}
+.time {
+  font-size: 3em;
+  color: var(--brown);
+}
+.time small {
+  font-size: 0.3em;
+  vertical-align: middle;
+}
+
+
 footer {
   text-align: center;
   color: var(--brown);
 }
 footer a{
-    color:var(--dkpurple)
+    color:var(--mdpurple)
 }
-footer a:visited{
+/* footer a:visited{
     color: var(--mdpurple);
-}
+} */
