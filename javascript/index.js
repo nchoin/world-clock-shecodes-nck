@@ -1,11 +1,11 @@
-function updateTheTime () {
-// information for Local time
+function updateTheTime() {
+  // information for Local time
   let localElement = document.querySelector("#local");
   let localDateElement = localElement.querySelector(".date");
   let localTimeElement = localElement.querySelector(".time");
   let localTimeZone = moment();
 
-localDateElement.innerHTML = localTimeZone.format("MMMM D, YYYY");
+  localDateElement.innerHTML = localTimeZone.format("MMMM D, YYYY");
   localTimeElement.innerHTML = localTimeZone.format(
     "h:mm:ss [<small>]A[</small>]"
   );
@@ -31,5 +31,45 @@ localDateElement.innerHTML = localTimeZone.format("MMMM D, YYYY");
     "h:mm:ss [<small>]A[</small>]"
   );
 }
+
+function updateCityTimeInfo(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  console.log(cityTime.format("MMMM D, YYYY"));
+  console.log(cityTime.format("h:mm:ss A "));
+//  repalce the name of the  cityTimeZone with the acutal name of the city
+  if (cityTimeZone === "America/New_York") {
+    cityName = "Boston";
+  }
+  if (cityTimeZone === "Europe/Rome") {
+    cityName = "Rome";
+  }
+  if (cityTimeZone === "Australia/Sydney") {
+    cityName = "Sydney";
+  }
+  if (cityTimeZone === "Europe/Athens") {
+    cityName = "Thessaloniki";
+  }
+  console.log(cityName)
+
+ let newCityElement = document.querySelector("#cities-replace");
+newCityElement.innerHTML = `
+  <div class="city">
+    <div>
+      <h2>${cityName}</h2>
+      <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
+    </div>
+    <div class="time">
+      ${cityTime.format("h:mm:ss")}
+      <small>${cityTime.format("A")}</small>
+    </div>
+  </div>`
+
+
+}
 updateTheTime();
- setInterval(updateTheTime,1000);
+setInterval(updateTheTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city-selected");
+
+citiesSelectElement.addEventListener("change", updateCityTimeInfo);
