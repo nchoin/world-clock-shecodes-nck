@@ -43,16 +43,16 @@ function updateCityTimeInfo(event) {
   // eraseNewCityElement.innerHTML = "";
 //  repalce the name of the  cityTimeZone with the acutal name of the city
   if (cityTimeZone === "America/New_York") {
-    cityName = "Boston";
+    cityName = "Boston 🇺🇸";
   }
   if (cityTimeZone === "Europe/Rome") {
-    cityName = "Rome";
+    cityName = " Rome 🇮🇹";
   }
-  if (cityTimeZone === "Australia/Sydney") {
-    cityName = "Sydney";
+  if (cityTimeZone === "Pacific/Honolulu") {
+    cityName = " Kapalua 🌺";
   }
   if (cityTimeZone === "Europe/Athens") {
-    cityName = "Thessaloniki";
+    cityName = " Thessaloniki🇬🇷";
   }
   console.log(cityName)
 
