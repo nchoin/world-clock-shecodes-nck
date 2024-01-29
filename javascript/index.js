@@ -30,6 +30,17 @@ function updateTheTime() {
   londonTimeElement.innerHTML = londonTimeZone.format(
     "h:mm:ss [<small>]A[</small>]"
   );
+
+  // information for London
+  let vancouverElement = document.querySelector("#vancouver");
+  let vancouverDateElement = vancouverElement.querySelector(".date");
+  let vancouverTimeElement = vancouverElement.querySelector(".time");
+  let vancouverTimeZone = moment().tz("America/Vancouver");
+
+  vancouverDateElement.innerHTML = vancouverTimeZone.format("MMMM D, YYYY");
+  vancouverTimeElement.innerHTML = vancouverTimeZone.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCityTimeInfo(event) {

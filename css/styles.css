@@ -54,7 +54,7 @@ select {
   background: var(--hintofpink);
 }
 h2 {
-  margin-bottom: 1px;
+  margin: 1px 0px;
   font-size: 1.5em;
 }
 
