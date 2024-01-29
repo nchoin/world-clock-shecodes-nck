@@ -1,5 +1,15 @@
-// information for Chicago
 function updateTheTime () {
+// information for Local time
+  let localElement = document.querySelector("#local");
+  let localDateElement = localElement.querySelector(".date");
+  let localTimeElement = localElement.querySelector(".time");
+  let localTimeZone = moment();
+
+localDateElement.innerHTML = localTimeZone.format("MMMM D, YYYY");
+  localTimeElement.innerHTML = localTimeZone.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+  // information for Chicago
   let chicagoElement = document.querySelector("#chicago");
   let chicagoDateElement = chicagoElement.querySelector(".date");
   let chicagoTimeElement = chicagoElement.querySelector(".time");
