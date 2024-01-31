@@ -7,7 +7,7 @@ function updateTheTime() {
 
   localDateElement.innerHTML = localTimeZone.format("MMMM D, YYYY");
   localTimeElement.innerHTML = localTimeZone.format(
-    "h:mm:ss [<small>]A[</small>]"
+    "h:mm [<small>]A[</small>]"
   );
   // information for Chicago
   let chicagoElement = document.querySelector("#chicago");
@@ -17,7 +17,7 @@ function updateTheTime() {
 
   chicagoDateElement.innerHTML = chicagoTimeZone.format("MMMM D, YYYY");
   chicagoTimeElement.innerHTML = chicagoTimeZone.format(
-    "h:mm:ss [<small>]A[</small>]"
+    "h:mm[<small>]A[</small>]"
   );
 
   // information for London
@@ -28,7 +28,7 @@ function updateTheTime() {
 
   londonDateElement.innerHTML = londonTimeZone.format("MMMM D, YYYY");
   londonTimeElement.innerHTML = londonTimeZone.format(
-    "h:mm:ss [<small>]A[</small>]"
+    "h:mm [<small>]A[</small>]"
   );
 
   // information for Vancouver
@@ -39,7 +39,7 @@ function updateTheTime() {
 
   vancouverDateElement.innerHTML = vancouverTimeZone.format("MMMM D, YYYY");
   vancouverTimeElement.innerHTML = vancouverTimeZone.format(
-    "h:mm:ss [<small>]A[</small>]"
+    "h:mm [<small>]A[</small>]"
   );
 }
  let cityTime;
@@ -76,7 +76,7 @@ function updateSelectedCityTime(){
       <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
     </div>
     <div class="time">
-      ${cityTime.format("h:mm:ss")}
+      ${cityTime.format("h:mm:")}
       <small>${cityTime.format("A")}</small>
     </div>
   </div>`;
