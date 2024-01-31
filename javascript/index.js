@@ -76,7 +76,7 @@ function updateSelectedCityTime(){
       <div class="date">${cityTime.format("MMMM D, YYYY")}</div>
     </div>
     <div class="time">
-      ${cityTime.format("h:mm:")}
+      ${cityTime.format("h:mm")}
       <small>${cityTime.format("A")}</small>
     </div>
   </div>`;
