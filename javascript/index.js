@@ -82,7 +82,10 @@ function updateSelectedCityTime(){
   </div>`;
 }
 }
-setInterval(updateSelectedCityTime, 1000);
+updateSelectedCityTime()
+setTimeout(()=>{
+  updateCityTimeInfo(event)
+},1000);
 }
 
 updateTheTime();
